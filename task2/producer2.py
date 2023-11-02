@@ -39,8 +39,8 @@ for contact in contacts:
         logger.error(f"Помилка збереження контакту: {e}")
 
     try:
-        connection_r.basic_publish(exchange='', routing_key='Go2', body='Hello World!'.encode())  # Відправляємо усі контакти до черги 'hello'
-        logger.info("Повідомлення відправлено в чергу 'hello'")
+        connection_r.basic_publish(exchange='', routing_key='Go2', body='Hello World!'.encode())  # Відправляємо усі контакти до черги 'Go2'
+        logger.info("Повідомлення відправлено в чергу 'Go2'")
     except Exception as e:
         logger.error(f"Помилка відправки повідомлення: {e}")
 
